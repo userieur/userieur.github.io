@@ -6,39 +6,74 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link rel="stylesheet" href="/_assets/main.css" />
 
-    <title>Docker - testing</title>
+    <title>Basics | System - Basics</title>
   <link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
   <body>
     <div class="main">
       <nav class="navigation">
-        <a href="/">testing</a>
+        <a href="/">Basics</a>
       </nav>
       <article>
         <header>
-          <h1 class="article-title">Docker</h1>
+          <h1 class="article-title">Basics | System</h1>
           <div class="article-info">
             <div>
               <span
-                >Created At：<time datetime="1664798291433"
+                >Created At：<time datetime="1664798313527"
                   >2022-10-03 13:58</time
                 ></span
               >
               <span
-                >Updated At：<time datetime="1664804264547"
-                  >2022-10-03 15:37</time
+                >Updated At：<time datetime="1664804504198"
+                  >2022-10-03 15:41</time
                 ></span
               >
             </div>
             
           </div>
         </header>
-        <div class="article-content markdown-body"><h1 id="docker">Docker</h1>
-<p>update<br />
-67676786<br />
-<a href="/article/docker">Docker</a><br />
-<a>System</a><br />
-<a>GIT</a><br />
-<a href="/article/linux">Linux</a></p>
+        <div class="article-content markdown-body"><h1 id="system">System</h1>
+<p><a href="/article/basics-or-docker">Docker</a><br />
+<a href="/article/basics-or-system">System</a><br />
+<a href="/article/basics-or-git">GIT</a><br />
+<a href="/article/basics-or-linux">Linux</a></p>
+<ul>
+<li>Install OpenSSH</li>
+<li>Install GIT</li>
+<li>Install Docker</li>
+</ul>
+<h2 id="install-openssh">Install OpenSSH</h2>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>Download &amp; Install <a title="https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui" href="https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui">OpenSSH</a></li>
+</ol>
+<p><em>If no admin rights, skip and go to step 2</em></p>
+<h3 id="linux">Linux</h3>
+<p><em>Only relevant if ssh-agent is not installed already</em></p>
+<ol>
+<li>Download &amp; Install <a title="https://ubuntu.com/server/docs/service-openssh" href="https://ubuntu.com/server/docs/service-openssh">OpenSSH</a></li>
+</ol>
+<div><pre class="hljs"><code>sudo apt install openssh-<span class="hljs-keyword">client</span></code></pre></div>
+<h2 id="installing-git">Installing GIT</h2>
+<h3 id="windows-2">Windows</h3>
+<ol>
+<li>Download &amp; Install <a title="https://git-scm.com/download/win" href="https://git-scm.com/download/win">GIT</a></li>
+<li>Configure SSH keys</li>
+</ol>
+<h2 id="can-also-install-github-desktop">Can also install GitHub Desktop</h2>
+<h3 id="linux-2">Linux</h3>
+<p><a title="https://www.atlassian.com/git/tutorials/install-git#linux" href="https://www.atlassian.com/git/tutorials/install-git#linux">Instructions</a></p>
+<div><pre class="hljs"><code><span class="hljs-attribute">sudo apt update</span></code></pre></div>
+<div><pre class="hljs"><code>sudo apt <span class="hljs-keyword">install</span> git</code></pre></div>
+<p>Verify installation</p>
+<div><pre class="hljs"><code>git <span class="hljs-comment">--version</span></code></pre></div>
+<h2 id="installing-docker">Installing Docker</h2>
+<p>You have to install both docker and docker compose</p>
+<h2 id="installing-vs-code">Installing VS Code</h2>
+<p>First time setup</p>
+<h3 id="windows-3">Windows</h3>
+<p>Download GIT</p>
+<h1 id="docker">Docker</h1>
 <p><em>REQUIREMENT: Cloned Git-Repository which includes a DockerFile and Dockercompose (.yml) file</em></p>
 <ul>
 <li>Setting up the environment</li>
@@ -73,7 +108,7 @@
 <li>Using the terminal which is running the docker-compose, enter <code>CTRL+C</code>. This terminates all running containers.</li>
 <li>Enter the following command:</li>
 </ol>
-<div><pre class="hljs"><code>sudo docker-compose down                        <span class="hljs-comment">#add --remove-orphans if you want to clean everything</span></code></pre></div>
+<div><pre class="hljs"><code><span class="hljs-attribute">sudo</span> docker-compose down                        <span class="hljs-comment">#add --remove-orphans if you want to clean everything</span></code></pre></div>
 <ol start="3">
 <li>Next time when starting the environment, you only have to do the <code>docker-compose up</code> from setting up the environment step 3</li>
 </ol>
